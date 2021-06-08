@@ -15,6 +15,10 @@ class DataController extends GetxController {
     return data.value.regionData.length;
   }
 
+  RegionData getRegionDataAt(int index) {
+    return data.value.regionData.elementAt(index);
+  }
+
   Future<void> getData() async {
     isLoading(true);
     final response = await http.get(Uri.parse(Config.dataUrl));

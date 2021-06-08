@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learn_getx/controller.dart';
+import 'package:learn_getx/details.dart';
 import 'package:learn_getx/model.dart';
 
 void main() => runApp(GetMaterialApp(home: Home()));
@@ -57,6 +58,7 @@ class Home extends StatelessWidget {
                           title: Text("${r.region}"),
                           subtitle: Text("Active cases: ${r.activeCases}"),
                           leading: Icon(Icons.account_tree),
+                          onTap: () async => await Get.to(DetailsPage(index)),
                         );
                       }),
                 ),
